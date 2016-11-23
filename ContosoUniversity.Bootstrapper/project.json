@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "AutoMapper": "4.1.1",
+    "ContosoUniversity.Application.Interfaces": "1.0.0-*",
+    "ContosoUniversity.Application.Services": "1.0.0-*",
+    "ContosoUniversity.Domain.Entities": "1.0.0-*",
+    "ContosoUniversity.Repository.Data": "1.0.0-*",
+    "ContosoUniversity.Repository.Interfaces": "1.0.0-*",
+    "ContosoUniversity.UnitOfWork.Interfaces": "1.0.0-*",
+    "ContosoUniversity.UnitOfWork.Persistence": "1.0.0-*",
+    "Microsoft.AspNetCore.Session": "1.0.0",
+    "Microsoft.EntityFrameworkCore": "1.0.1",
+    "Microsoft.EntityFrameworkCore.SqlServer": "1.0.1",
+    "Microsoft.Extensions.DependencyInjection.Abstractions": "1.0.0",
+    "NETStandard.Library": "1.6.0"
+  },
+
+  "frameworks": {
+    "netstandard1.6": {
+      "imports": "dnxcore50"
+    }
+  }
+}
