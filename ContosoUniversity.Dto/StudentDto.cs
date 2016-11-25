@@ -16,6 +16,9 @@ namespace ContosoUniversity.Dto
 
         public string LastName { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Display(Name = "Enrollment Date")]
         public DateTime EnrollmentDate { get; set; }
 
         public IEnumerable<EnrollmentDto> Enrollments { get; set; }

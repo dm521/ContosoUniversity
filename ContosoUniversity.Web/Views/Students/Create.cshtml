@@ -14,9 +14,27 @@
         <div class="form-group">
             <label asp-for="EnrollmentDate" class="col-md-2 control-label"></label>
             <div class="col-md-10">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" asp-for="EnrollmentDate" />
+                    <span class="input-group-addon" style="width:14%">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+            
+
+            <!--<div class="input-group date col-md-10" id="datetimepicker1">
+                <input class="form-control" asp-for="EnrollmentDate" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                </span>
+            </div>
+            -->
+
+            <!--<div class="col-md-10">
                 <input asp-for="EnrollmentDate" class="form-control" />
                 <span asp-validation-for="EnrollmentDate" class="text-danger"></span>
-            </div>
+            </div>-->
         </div>
         <div class="form-group">
             <label asp-for="FirstName" class="col-md-2 control-label"></label>
@@ -43,5 +61,11 @@
 <div>
     <a asp-action="Index">Back To List</a>
 </div>
+
+<script type="text/javascript">
+    $(function () {
+        $('#datetimepicker1').datetimepicker();
+    });
+</script>
 
 

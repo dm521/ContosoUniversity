@@ -22,6 +22,17 @@ namespace ContosoUniversity.UnitOfWork.Persistence
             modelBuilder.Entity<Student>().ToTable("Student");
             modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
             modelBuilder.Entity<Course>().ToTable("Course");
+            modelBuilder.Entity<Department>().ToTable("Department");
+            modelBuilder.Entity<Instructor>().ToTable("Instructor");
+            modelBuilder.Entity<OfficeAssignment>().ToTable("OfficeAssignment");
+            modelBuilder.Entity<CourseAssignment>().ToTable("CourseAssignment");
+
+            modelBuilder.Entity<CourseAssignment>().HasKey(c=>new
+            {
+                c.CourseID,
+                c.InstructorID
+            }
+            );
             base.OnModelCreating(modelBuilder);
         }
     }

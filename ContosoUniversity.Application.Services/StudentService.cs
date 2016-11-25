@@ -37,6 +37,15 @@ namespace ContosoUniversity.Application.Services
             return -1;
         }
 
+        public async Task<bool> DeleteStudent(int id)
+        {
+            var student = await _studentRepository.GetStudentById(id).FirstOrDefaultAsync();
+
+            _unitOfWork.Remove(student);
+
+            return await _unitOfWork.CommitAsync();
+        }
+
         public async Task<bool> EditStudent(int Id, string firstName, string lastName, DateTime enrollmentDate)
         {
             var student = await _studentRepository.GetStudentById(Id).FirstOrDefaultAsync();

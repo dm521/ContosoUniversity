@@ -16,5 +16,7 @@ namespace ContosoUniversity.Application.Interfaces
         Task<bool> EditStudent(int Id,string firstName, string lastName,DateTime enrollmentDate);
 
         Task<int> CreateStudent(string FirstName, string LastName, DateTime enrollmentDate);
+
+        Task<bool> DeleteStudent(int id);
     }
 }
